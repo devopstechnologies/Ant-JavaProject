@@ -2,6 +2,7 @@ stage 'Init'
 node {
   checkout scm
   'echo $BRANCH_NAME'
+  bat 'ant'
 }
 if (env.BRANCH_NAME == 'master') {
   stage 'Only on master'
